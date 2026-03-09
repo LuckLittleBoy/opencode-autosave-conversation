@@ -9,6 +9,7 @@ import type {
 } from './types.js';
 
 export function formatSession(
+  id: string,
   title: string,
   createdAt: Date,
   messages: MessageData[],
@@ -16,7 +17,7 @@ export function formatSession(
 ): string {
   const lines: string[] = [];
 
-  lines.push(`# Session: ${title}`);
+  lines.push(`# Session: ${title} (ID: ${id})`);
   lines.push('');
   lines.push(`**Created:** ${formatTimestamp(createdAt)}`);
   lines.push('');
