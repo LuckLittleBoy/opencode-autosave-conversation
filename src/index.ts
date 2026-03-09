@@ -297,6 +297,7 @@ async function saveSessionToFile(
     }
 
     const content = formatSession(
+      sessionID,
       title,
       session.createdAt,
       messages,
